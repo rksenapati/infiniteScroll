@@ -1,0 +1,22 @@
+<ul class="list-group">
+    <li class="list-item" *ngFor="let a of passDtl; let i = index">
+      <a class="user-link" *ngIf="i + 1 === passDtl.length" #theLastList>
+        <img [src]="a.avatar" />
+        <span>
+          <p>
+            <span class="list-item-heading">email</span>: {{ a.email }}
+          </p>
+          <p><span class="list-item-heading">Name</span>: {{ a.first_name }} {{a.last_name}}</p>
+        </span>
+      </a>
+      <a class="user-link" *ngIf="i + 1 != passDtl.length">
+        <img [src]="a.avatar" />
+        <span>
+          <p>
+            <span class="list-item-heading">email</span>: {{ a.email }}
+          </p>
+          <p><span class="list-item-heading">Name</span>: {{ a.first_name }} {{a.last_name}}</p>
+        </span>
+      </a>
+    </li>
+  </ul>
